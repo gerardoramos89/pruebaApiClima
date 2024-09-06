@@ -60,7 +60,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    const apiKey = '0673ada8f3f6dad65c95b9f4871815e5';
+    const apiKey = '';
 
     // Función para obtener el clima por ciudad
     $('#getWeatherByCity').on('click', function() {
