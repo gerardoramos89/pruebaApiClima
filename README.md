@@ -53,7 +53,7 @@ La **pruebaApiClima** es una aplicación web que permite a los usuarios consulta
       Consulta el clima de tu ubicación usando la geolocalización.
       Revisa el historial de consultas meteorológicas realizadas por el usuario autenticado.
 
-      ![image](https://github.com/user-attachments/assets/0e2b0f9b-7b57-4f0e-8cdd-46f17784650f)
+![image](https://github.com/user-attachments/assets/98e13ea8-c17b-4c05-a533-4116cb96a089)
 
          ###  Estructura de la Base de Datos
       El archivo weather_app.sql incluye la estructura de las siguientes tablas:
