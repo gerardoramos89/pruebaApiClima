@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Servicios de Transporte para Empresas | TransAuktion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre las mejores soluciones de transporte para empresas en TransAuktion. Servicio rápido y seguro para todas tus necesidades de logística. ¡Solicita una cotización hoy!">
+</head>
+
+<body>
+  <section>
+    <center>
+    <h1>Sistema de verificacion Clima</h1>
+    <h2>Gerardo Ramos Vargas</h2> 
+    </center>   
+    <h2 lang="es" data-translate-key="textversionbeta">Prueba Técnica de Desarrollo de Software ¡ Firma Calidadsg !</h2>
+    <label for="language" data-translate-key="text2">Selecciona un idioma:</label>
+    <select id="language" name="language" onchange="translatefun()">
+      <option value="es" class="flag-es" data-translate-key="text3" selected>Español</option>
+      <option value="en" class="flag-en" data-translate-key="text4" >Inglés</option>
+      <!-- Agrega más opciones según tus necesidades -->
+    </select>
+  </section>
+
+  <section>
+    <H1 data-translate-key="text7">Bienvenido a transauktion, aplicación web en PHP que gestiona un sistema de clima personalizada.</H1>
+  </section>
+
+  <section>
+    <h2 data-translate-key="text8">características avanzadas:</h2>
+      <ul>
+        <li data-translate-key="text14"><strong>1. Sistema de Autenticación</strong><br>- Implementa medidas de seguridad: protección contra inyecciones SQL, XSS, y CSRF</li>
+        <li data-translate-key="text15"><strong>2. Seguridad</strong><br>-Asegúrate de que las contraseñas se almacenen de forma segura mediante hashing (por ejemplo, 
+password_hash de PHP</li>
+        <li data-translate-key="text16"><strong>3. Consumo de API de clima gratuita (OpenWeatherMap) </strong></li>
+      </ul>
+  </section>
+
+  <section>
+    <div class="cta-buttons">
+      <a href="https://transauktion.com/home/ladingpage/login.php"  id="transportistas-btn"><i class="fas fa-truck"></i>
+        <p data-translate-key="textversionbeta"><strong>ENTRAR</strong></p>
+      </a>
+    </div>
+  </section>
+
+
+  <div id="cookie-banner" class="cookie-banner">
+    <p data-translate-key="textcookie">Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al utilizar nuestro sitio web, aceptas
+      todas las cookies de acuerdo con nuestra </p><a href="/política-de-cookies" style="color:#FFFFFF;" data-translate-key="textcookiepolice">Política de Cookies</a>.
+    <button id="accept-cookies"><p data-translate-key="textaceptar" style="color:#FFFFF">Aceptar</p></button>
+  </div>
+
+  <script type="text/javascript" src="js/translations.js"></script>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      const cookieBanner = document.getElementById('cookie-banner');
+      const acceptCookiesBtn = document.getElementById('accept-cookies');
+
+      // Verificar si ya se aceptaron las cookies
+      if (localStorage.getItem('cookiesAccepted') !== 'true') {
+        cookieBanner.style.display = 'block';
+      }
+
+      // Manejar clic en el botón de aceptar cookies
+      acceptCookiesBtn.addEventListener('click', function () {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.style.display = 'none';
+      });
+    })
+
+    function translatefun() {
+      const selectedLanguage = document.getElementById('language').value;
+
+
+
+      const elementsToTranslate = document.querySelectorAll('[data-translate-key]');
+      localStorage.setItem('lang', selectedLanguage);
+
+      elementsToTranslate.forEach(element => {
+        const translationKey = element.getAttribute('data-translate-key');
+        const translation = translations[selectedLanguage][translationKey];
+        if (translation) {
+          element.innerHTML = translation;
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
